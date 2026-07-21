@@ -62,7 +62,7 @@ export const siteContent = {
   ],
   links: {
     steam: '#',
-    discord: '#',
+    discord: 'https://discord.com/invite/G6eFF6TGyW',
   },
 }
 
