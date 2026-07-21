@@ -113,7 +113,7 @@ function CallsToAction() {
       </article>
       <article className="cta-panel cta-panel--discord">
         <div><p className="eyebrow"><span aria-hidden="true" />Join the campfire</p><h2>Follow development on Discord.</h2><p>See work in progress, meet future neighbors, and help shape the community from the beginning.</p></div>
-        <LinkButton href={siteContent.links.discord} variant="secondary">Discord invite coming soon</LinkButton>
+        <LinkButton href={siteContent.links.discord} variant="secondary" external>Join the Discord</LinkButton>
       </article>
     </section>
   )
@@ -138,7 +138,7 @@ function Footer() {
       <div className="page-shell footer__top">
         <a className="brand brand--footer" href="#top"><OakMark /><span><strong>Oakwood</strong><small>Online</small></span></a>
         <p>A medieval world built by hand.<br />An independent game in development.</p>
-        <div className="footer__links"><a href="#playtest">Steam <ExternalLink aria-hidden="true" /></a><a href="#community">Discord <ExternalLink aria-hidden="true" /></a></div>
+        <div className="footer__links"><a href="#playtest">Steam <ExternalLink aria-hidden="true" /></a><a href={siteContent.links.discord} target="_blank" rel="noreferrer">Discord <ExternalLink aria-hidden="true" /></a></div>
       </div>
       <div className="page-shell footer__bottom"><span>© {new Date().getFullYear()} Oakwood Online</span><span>All footage and features are work in progress.</span></div>
     </footer>
