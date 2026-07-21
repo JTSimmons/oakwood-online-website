@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { Menu, X, ExternalLink } from 'lucide-react'
 import { siteContent } from './data/siteContent'
-import { LinkButton, OakMark, ScenePlaceholder, SectionHeading } from './components'
+import { LinkButton, ScenePlaceholder, SectionHeading } from './components'
 
 function Navigation() {
   const [open, setOpen] = useState(false)
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Oakwood Online home">
-        <OakMark />
+        <img className="brand-mark" src={`${import.meta.env.BASE_URL}assets/oakwood-emblem.webp`} alt="" width="44" height="44" />
         <span><strong>Oakwood</strong><small>Online</small></span>
       </a>
       <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-nav" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>
@@ -24,9 +24,8 @@ function Navigation() {
 
 function Hero() {
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="top" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/oakwood-header.webp)` }}>
       <Navigation />
-      <div className="hero__forest" aria-hidden="true"><span /><span /><span /></div>
       <div className="hero__content page-shell">
         <p className="eyebrow"><span aria-hidden="true" />{siteContent.hero.eyebrow}</p>
         <h1>{siteContent.hero.title}</h1>
@@ -136,7 +135,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="page-shell footer__top">
-        <a className="brand brand--footer" href="#top"><OakMark /><span><strong>Oakwood</strong><small>Online</small></span></a>
+        <a className="brand brand--footer" href="#top"><img className="brand-mark" src={`${import.meta.env.BASE_URL}assets/oakwood-emblem.webp`} alt="" width="44" height="44" /><span><strong>Oakwood</strong><small>Online</small></span></a>
         <p>A medieval world built by hand.<br />An independent game in development.</p>
         <div className="footer__links"><a href="#playtest">Steam <ExternalLink aria-hidden="true" /></a><a href={siteContent.links.discord} target="_blank" rel="noreferrer">Discord <ExternalLink aria-hidden="true" /></a></div>
       </div>
