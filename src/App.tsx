@@ -92,12 +92,21 @@ function Screenshots() {
 
 function Development() {
   return (
-    <section className="section development" id="development">
-      <div className="page-shell development__grid">
-        <div><SectionHeading eyebrow={siteContent.development.eyebrow} title={siteContent.development.title} /><p className="development__copy">{siteContent.development.description}</p></div>
-        <ol className="milestones">
-          {siteContent.development.milestones.map((item, index) => <li key={item.label}><span className="milestone__number">0{index + 1}</span><div><strong>{item.label}</strong><small>{item.detail}</small></div><span className={`status status--${item.status.toLowerCase().replace(' ', '-')}`}>{item.status}</span></li>)}
-        </ol>
+    <section className="section development-preview" id="development">
+      <div className="page-shell development-preview__grid">
+        <div>
+          <SectionHeading eyebrow="Development notes" title="Building the world, and the systems behind it." />
+          <p className="development-preview__copy">Devlogs follow Oakwood’s progress. Engineering notes go deeper into the Unity, FishNet, Steam, and backend decisions behind the game.</p>
+          <LinkButton href="/development/" variant="text">Browse development notes</LinkButton>
+        </div>
+        <div className="publication-preview-list">
+          {siteContent.publications.map((publication) => <article className="publication-preview-card" key={publication.href}>
+            <p className="publication-preview-card__meta">{publication.type} · {publication.readTime}</p>
+            <h3><a href={publication.href}>{publication.title}</a></h3>
+            <p>{publication.description}</p>
+            <a className="publication-preview-card__link" href={publication.href}>Read the {publication.type.toLowerCase()} <span aria-hidden="true">→</span></a>
+          </article>)}
+        </div>
       </div>
     </section>
   )
