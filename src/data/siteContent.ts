@@ -43,16 +43,15 @@ export const siteContent = {
     { title: 'Warm food, long roads', label: 'Cooking & survival', variant: 'campfire' },
     { title: 'Beyond the village', label: 'Exploration', variant: 'exploration' },
   ],
-  development: {
-    eyebrow: 'In active development',
-    title: 'Built in the open, one system at a time',
-    description: 'Oakwood Online is an independent project in early development. Core systems are taking shape now, and community playtests will help decide what deserves attention next.',
-    milestones: [
-      { label: 'Core foundation', detail: 'Multiplayer, interaction, inventory', status: 'Built' },
-      { label: 'Living systems', detail: 'Gathering, crafting, building, combat', status: 'In progress' },
-      { label: 'The wider world', detail: 'Villages, exploration, deeper progression', status: 'Ahead' },
-    ],
-  },
+  publications: [
+    {
+      type: 'Engineering note',
+      readTime: '12 min read',
+      title: 'Protecting Steam Authentication Tickets in an Unencrypted FishNet Transport',
+      description: 'Replacing a reusable credential on the game transport with an opaque, 30-second, single-use connection grant.',
+      href: '/development/steam-auth-connection-grants/',
+    },
+  ],
   faq: [
     { question: 'What kind of game is Oakwood Online?', answer: 'It is a semi-realistic medieval survival and crafting MMO. The focus is on gathering, making useful things, building lasting homes and villages, exploring, and cooperating with other players.' },
     { question: 'When can I play?', answer: 'Oakwood Online is still in early development. A Steam Playtest is planned, with timing announced through Discord as the build becomes ready for more players.' },
