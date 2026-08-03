@@ -5,6 +5,7 @@ export const siteContent = {
     { label: 'The World', href: '#world' },
     { label: 'Features', href: '#features' },
     { label: 'Development', href: '#development' },
+    { label: 'Engineering Notes', href: '/development/' },
     { label: 'FAQ', href: '#faq' },
   ],
   hero: {
@@ -62,7 +63,7 @@ export const siteContent = {
   ],
   links: {
     steam: '#',
-    discord: 'https://discord.com/invite/G6eFF6TGyW',
+    discord: 'https://discord.gg/5wcUbVU58',
   },
 }
 
