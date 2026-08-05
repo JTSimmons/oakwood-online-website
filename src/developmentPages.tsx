@@ -7,8 +7,7 @@ function PageNavigation({ notes = false }: { notes?: boolean }) {
   const [open, setOpen] = useState(false)
   return <header className="site-header site-header--page">
     <a className="brand" href={base} aria-label="Oakwood Online home">
-      <img className="brand-mark" src={`${base}assets/oakwood-emblem.webp`} alt="" width="44" height="44" />
-      <span><strong>Oakwood</strong><small>Online</small></span>
+      <img className="brand-logo" src={`${base}assets/oakwood-online-logo.webp`} alt="" width="919" height="280" />
     </a>
     <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="page-nav" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
     <nav id="page-nav" className={open ? 'main-nav main-nav--open' : 'main-nav'} aria-label="Main navigation">

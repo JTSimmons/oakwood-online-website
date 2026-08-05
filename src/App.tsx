@@ -8,8 +8,7 @@ function Navigation() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Oakwood Online home">
-        <img className="brand-mark" src={`${import.meta.env.BASE_URL}assets/oakwood-emblem.webp`} alt="" width="44" height="44" />
-        <span><strong>Oakwood</strong><small>Online</small></span>
+        <img className="brand-logo" src={`${import.meta.env.BASE_URL}assets/oakwood-online-logo.webp`} alt="" width="919" height="280" />
       </a>
       <button className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-nav" aria-label={open ? 'Close navigation' : 'Open navigation'} onClick={() => setOpen(!open)}>
         {open ? <X /> : <Menu />}

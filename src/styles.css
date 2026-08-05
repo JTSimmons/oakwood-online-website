@@ -41,6 +41,7 @@ h1, h2, h3, p { margin-top: 0; }
 .brand strong { color: var(--parchment); font: 600 1.5rem/1 var(--serif); letter-spacing: .02em; }
 .brand small { margin-top: .35rem; color: var(--gold); font-size: .55rem; letter-spacing: .36em; text-transform: uppercase; }
 .brand-mark { width: 42px; height: 42px; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(0,0,0,.32)); }
+.brand-logo { display: block; width: 220px; height: auto; filter: drop-shadow(0 3px 10px rgba(0,0,0,.38)); }
 .main-nav { display: flex; align-items: center; gap: 2rem; color: #d4d1c6; font-size: .78rem; }
 .main-nav a { transition: color .2s ease; }
 .main-nav a:hover { color: white; }
@@ -249,6 +250,7 @@ details p { max-width: 650px; padding: 0 2rem 1.5rem 0; color: #80867c; font-siz
 @media (max-width: 680px) {
   .page-shell { width: min(100% - 2rem, 1180px); }
   .site-header { height: 72px; padding-inline: 1rem; }
+  .site-header .brand-logo { width: 180px; }
   .menu-toggle { display: grid; place-items: center; }
   .main-nav { position: absolute; top: 72px; right: 0; left: 0; display: none; padding: 1.5rem 1rem 2rem; flex-direction: column; align-items: stretch; gap: 0; border-bottom: 1px solid var(--line); background: rgba(14,19,15,.98); }
   .main-nav--open { display: flex; }
